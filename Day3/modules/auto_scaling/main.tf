@@ -38,4 +38,5 @@ resource "aws_autoscaling_group" "this" {
   placement_group           = var.placement_group
   launch_configuration      = aws_launch_configuration.this.name
   vpc_zone_identifier       = var.vpc_zone_identifier
+  target_group_arns = var.target_group_arns
 }
