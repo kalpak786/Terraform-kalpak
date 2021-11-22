@@ -12,7 +12,7 @@ resource "aws_ebs_volume" "example1" {
   tags = {
     Name = "newvol"
   }
-}   
+}
 
 resource "aws_instance" "web" {
   ami               = "ami-0e0bf4b3a0c0e0adc"
@@ -29,8 +29,8 @@ resource "aws_ebs_volume" "example" {
   availability_zone = "us-west-1b"
   size              = 20
   tags = {
-     Name = "demovol"
-   }
+    Name = "demovol"
+  }
 }
 resource "aws_volume_attachment" "ebs_att" {
   device_name = "/dev/sdh"
@@ -52,15 +52,15 @@ resource "aws_iam_group_membership" "team" {
 
 
 resource "aws_iam_user" "user_one" {
-	   	name = "Harry"
+  name = "Harry"
 }
 
 resource "aws_iam_user" "user_two" {
-	  	name = "Sam"
+  name = "Sam"
 }
 
 resource "aws_iam_user" "user_three" {
-	  	name = "Tom"
+  name = "Tom"
 }
 
 resource "aws_iam_group" "Trainer" {
