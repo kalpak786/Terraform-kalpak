@@ -1,7 +1,7 @@
-name = ["iam-user", "admin", "unknown", "shubham", "vatan", "demo", "own", "mayur", "kalpak", "akshay", ]
+name = ["user1", "user2", "user3", "user4", "user5", "user6", "user7", "user8", "user9", "user10", ]
 
-# ami = "ami-0f19d220602031aed"
+# ami = "ami-0d5075a2643fdf738"
 # instance_type = "t2.micro"
 
-subnet_id      = ["subnet-32e47559", "subnet-04be8948", "subnet-b8e02fc5"]
-s3_bucket_name = ["prod-bucket-9", "stage-bucket-9", "qa-bucket-9", "prod-bucket-7", "stage-bucket-7", "qa-bucket-7", "prod-bucket-5", "stage-bucket-5", "qa-bucket-5", "prod-bucket-3"]
+subnet_id      = ["subnet-02f29c03103206353","subnet-0b30491118eb0da7c"]
+s3_bucket_name = ["task1", "task2", "task3", "task4", "task5", "task6", "task7", "task8", "task9", "task10"]
