@@ -1,11 +1,10 @@
-# route 53 private zone
+# created route53
 
 provider "aws" {
-  region  = "us-east-2"
-  profile = "default"
+  region  = "us-west-1"
 }
 
-resource "aws_route53_zone" "www" {
+resource "aws_route53_zone" "dev" {
   for_each = toset(var.name )
   name = "${each.key}.domain.com"
   
