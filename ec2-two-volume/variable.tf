@@ -7,6 +7,3 @@ variable "instance_type" {
 variable "subnet_id" {
   type = list(string)
 }
-# variable "device_name" {
-#   type = string
-# }
