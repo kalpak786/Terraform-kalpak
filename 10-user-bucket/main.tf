@@ -1,7 +1,6 @@
-# ceate iam user using count function
+# ceateed iam user with count function
 provider "aws" {
-  region  = "us-west-2"
-  profile = "default"
+  region  = "us-west-1"
 }
 resource "aws_iam_user" "this" {
   count = length(var.name)
@@ -9,7 +8,7 @@ resource "aws_iam_user" "this" {
   path  = "/"
 
   tags = {
-    tag-key = "terra-user"
+    tag-key = "user"
   }
 }
 
@@ -19,6 +18,6 @@ resource "aws_s3_bucket" "this" {
   acl    = "private"
 
   tags = {
-    Name = "My bucket"
+    Name = "tasks"
   }
 }
