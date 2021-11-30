@@ -1,6 +1,5 @@
 provider "aws" {
-  region  = "us-east-2"
-  profile = "default"
+  region  = "us-west-1"
 }
 resource "aws_instance" "this" {
   count         = length(var.subnet_id)
@@ -8,23 +7,23 @@ resource "aws_instance" "this" {
   instance_type = var.instance_type
   subnet_id     = var.subnet_id[count.index]
   tags = {
-    Name = "terra-ec2"
+    Name = "user"
   }
 }
-resource "aws_ebs_volume" "vol" {
+resource "aws_ebs_volume" "volume" {
   count             = length(var.subnet_id)
   availability_zone = aws_instance.this[count.index].availability_zone
   size              = 1
   tags = {
-    Name = "Extra_EBS"
+    Name = "EBS"
   }
 }
-resource "aws_ebs_volume" "vol1" {
+resource "aws_ebs_volume" "volume1" {
   count             = length(var.subnet_id)
   availability_zone = aws_instance.this[count.index].availability_zone
   size              = 1
   tags = {
-    Name = "Extra_EBS1"
+    Name = "EBS-1"
   }
 }
 
